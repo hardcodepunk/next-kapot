@@ -21,4 +21,12 @@ export const constantsTeachers = [
     description:
       'Roller from the UK. Has participated in many skating events and skates frequently. Passionate about teaching and passing the fire onto the younger generation.',
   },
+  {
+    name: 'David',
+    instagramLink: 'https://www.instagram.com/sharparazzi/',
+    timeSkating: 12,
+    age: 43,
+    description:
+      'AKA Sharp. Formerly sponsored by K2 and Razors, mini-ramp specialist from Leuven. Loves to share tips and tricks from his experience of participating in contests.',
+  },
 ]
