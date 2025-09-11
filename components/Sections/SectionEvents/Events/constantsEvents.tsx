@@ -17,7 +17,7 @@ export const constantsEvents = [
     date: 'TBA 2026',
     description:
       "Belgian annual celebration of inline skating! Feel the vibes as skaters from all over the world come together to showcase their tricks. It's more than a contest; it's a family gathering where everyone's passion for rollerblading is shared. Come out and play!",
-    buttonLabel: 'TBA',
+    buttonLabel: 'To be announced',
     disabledButton: true,
   },
   {
