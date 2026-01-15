@@ -10,16 +10,9 @@ export const constantsTeachers = [
   {
     name: 'Frieder',
     instagramLink: 'https://www.instagram.com/shredpuppy/',
-    timeSkating: 13,
-    age: 34,
-    description: 'Co-founder Kapot. Surfer/skater/climber gypsy. Street elitist. Skates 3.5 hours on average daily.',
-  },
-  {
-    name: 'Ryan',
-    timeSkating: 20,
-    age: 29,
-    description:
-      'Roller from the UK. Has participated in many skating events and skates frequently. Passionate about teaching and passing the fire onto the younger generation.',
+    timeSkating: 14,
+    age: 35,
+    description: 'Co-founder Kapot. Surfer/skater gypsy. Street elitist. Surfs/skates 3.5 hours on average daily.',
   },
   {
     name: 'David',
@@ -27,6 +20,6 @@ export const constantsTeachers = [
     timeSkating: 12,
     age: 43,
     description:
-      'AKA Sharp. Formerly sponsored by K2 and Razors, mini-ramp specialist from Leuven. Loves to share tips and tricks from his experience of participating in contests.',
+      'AKA coach Sharp. Formerly sponsored by K2 and Razors, mini-ramp specialist from Leuven. Loves to share tips and tricks from his experience of participating in contests.',
   },
 ]

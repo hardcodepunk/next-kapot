@@ -1,16 +1,5 @@
 export const constantsEvents = [
   {
-    title: 'Autumn Camp',
-    location: 'Blaarmeersen, Gent',
-    price: '85€',
-    date: '20 - 24 October',
-    description:
-      'A week-long inline skate camp in autumn. The camps are held in the Blaarmeersen skatepark in Gent. Open to inline skaters of all ages and skill levels. Led by Ryan who teaches trick focused inline skating or aggressive inline skating. A great way to learn new skills, make new friends, and have a great time on wheels. Only 10 spots available. When raining we have arranged SBA indoor skatepark as backup, it will be €5 extra per person to enter.',
-    buttonLabel: 'Register',
-    buttonLink: 'mailto:kapot@echtalleskapot.be?subject=Autumn%20Inline%20Skate%20Camp%20Registration',
-    disabledButton: false,
-  },
-  {
     title: 'Kapot Contest',
     location: 'Sportoase skatepark, Leuven',
     price: 'free',
@@ -30,14 +19,14 @@ export const constantsEvents = [
     buttonLabel: 'To be announced',
     disabledButton: true,
   },
-  {
-    title: 'Easter Camp',
-    location: 'Blaarmeersen, Gent',
-    price: 'TBA',
-    date: 'TBA',
-    description:
-      'A week-long inline skate camp during Easter. The camps are held in the Blaarmeersen skatepark in Gent. Open to inline skaters of all ages and skill levels. Led by Ryan who teaches trick focused inline skating or aggressive inline skating. A great way to learn new skills, make new friends, and have a great time on wheels. Only 10 spots available. When raining we have arranged SBA indoor skatepark as backup, it will be €5 extra per person to enter.',
-    buttonLabel: 'To be announced',
-    disabledButton: true,
-  },
+  // {
+  //   title: 'Easter Camp',
+  //   location: 'Blaarmeersen, Gent',
+  //   price: 'TBA',
+  //   date: 'TBA',
+  //   description:
+  //     'A week-long inline skate camp during Easter. The camps are held in the Blaarmeersen skatepark in Gent. Open to inline skaters of all ages and skill levels. Led by Ryan who teaches trick focused inline skating or aggressive inline skating. A great way to learn new skills, make new friends, and have a great time on wheels. Only 10 spots available. When raining we have arranged SBA indoor skatepark as backup, it will be €5 extra per person to enter.',
+  //   buttonLabel: 'To be announced',
+  //   disabledButton: true,
+  // },
 ]
