@@ -13,7 +13,7 @@ export const constantsPlans = [
     price: '€40 per hour',
     description:
       "You'll be privately taught to inline skate by one of our teachers. We have one pair of adaptable size junior aggressive inline skates to try out for children. Ask beforehand, not always available! All ages and levels welcome.",
-    list: ['private lesson', 'access to our online community'],
+    list: ['private lesson'],
     buttonLink: 'https://calendly.com/kapot/private-session',
     buttonLabel: 'Book session',
   },
