@@ -1,10 +1,10 @@
 export const constantsPlans = [
   {
     title: 'Sunday Group Class',
-    price: '10 lessons for €70',
+    price: '10 lessons for €80',
     description:
-      "Group sessions at skatepark Sportoase, Leuven. 10 lessons for 70 euro. From 10:30am til' 12. Learn the basics of aggressive inline skating and become a true soldier on blades. Minimum 10 years old. Protection gear and helmet obligatory!",
-    list: ['group lesson', 'coached by OG pro skater David (Sharp)'],
+      "Starting 8 of March. Group sessions at skatepark Sportoase, Leuven. 10 lessons for 80 euro. From 10:30am til' 12. Learn the basics of aggressive inline skating. Min 10 years old. Protection gear and helmet obligatory! We'll also ask you to be member of our organisation for €40 a year. This provides you a sports insurance.",
+    list: ['group lesson', 'coached by OG pro skater David (Sharp)', '1 year club membership'],
     buttonLink: 'https://tally.so/r/wAY26B',
     buttonLabel: 'Register',
   },
