@@ -4,7 +4,7 @@ import { RefObject } from 'react'
 import SectionEvents from '.'
 
 interface Props {
-  sectionEventsRef: RefObject<HTMLDivElement>
+  sectionEventsRef: RefObject<HTMLDivElement | null>
 }
 
 export default function WrappedSectionEvents({ sectionEventsRef, ...props }: Props) {

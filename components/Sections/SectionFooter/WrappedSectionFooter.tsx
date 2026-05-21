@@ -7,7 +7,7 @@ import Footer from '.'
 // fix: wrap component in a custom component
 
 interface Props {
-  sectionFooterRef: RefObject<HTMLDivElement>
+  sectionFooterRef: RefObject<HTMLDivElement | null>
 }
 
 export default function WrappedSectionFooter({ sectionFooterRef, ...props }: Props) {

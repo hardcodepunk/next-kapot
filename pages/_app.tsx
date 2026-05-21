@@ -5,6 +5,7 @@ import { AppProps } from 'next/app'
 // MUI
 import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
+import { AppCacheProvider } from '@mui/material-nextjs/v15-pagesRouter'
 
 // Vercel
 import { Analytics } from '@vercel/analytics/react'
@@ -19,21 +20,10 @@ import '../theme/fonts'
 // Global styles
 import '../styles/globals.css'
 
-// Cache
-import { CacheProvider, EmotionCache } from '@emotion/react'
-import createEmotionCache from '../src/createEmotionCache'
-
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache()
-
-export interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache
-}
-
-export default function MyApp(props: MyAppProps) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+export default function MyApp(props: AppProps) {
+  const { Component, pageProps } = props
   return (
-    <CacheProvider value={emotionCache}>
+    <AppCacheProvider {...props}>
       <Head>
         <meta name="description" content="Learn to inline skate, attend rollerblade contests and events. By and for the inline community." />
         <title>Kapot | Inline skate events, contests and lessons.</title>
@@ -44,6 +34,6 @@ export default function MyApp(props: MyAppProps) {
         <Analytics />
         <SpeedInsights />
       </ThemeProvider>
-    </CacheProvider>
+    </AppCacheProvider>
   )
 }
