@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { AppProps } from 'next/app'
 
 // MUI
-import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
+import { ThemeProvider } from '@mui/material/styles'
 
 // Vercel
 import { Analytics } from '@vercel/analytics/react'

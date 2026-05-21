@@ -16,7 +16,7 @@ import { IEvent } from './types'
 const Events = (props: IEvent) => {
   const { title, date, price, location, description, disabledButton, buttonLink, buttonLabel } = props
   return (
-    <Grid item md={6} lg={6}>
+    <Grid size={{ md: 6, lg: 6 }}>
       <ItemTitle variant="h1" component="h2">
         {title}
       </ItemTitle>
