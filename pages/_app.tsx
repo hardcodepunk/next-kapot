@@ -12,7 +12,9 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // Theme
 import theme from '../theme/theme'
-import { fontVariables } from '../theme/fonts'
+// Side-effect import so next/font's build plugin processes the fonts into the client bundle.
+// The CSS variables are applied to <body> in pages/_document.tsx.
+import '../theme/fonts'
 
 // Global styles
 import '../styles/globals.css'
@@ -38,9 +40,7 @@ export default function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className={fontVariables}>
-          <Component {...pageProps} />
-        </div>
+        <Component {...pageProps} />
         <Analytics />
         <SpeedInsights />
       </ThemeProvider>

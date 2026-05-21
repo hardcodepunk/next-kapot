@@ -3,6 +3,7 @@ import Document, { Html, Main, Head, NextScript, DocumentProps, DocumentContext 
 
 // Theme
 import theme from '../theme/theme'
+import { fontVariables } from '../theme/fonts'
 
 // Caching
 import createEmotionCache from '../src/createEmotionCache'
@@ -25,7 +26,7 @@ export default function MyDocument({ emotionStyleTags }: MyDocumentProps) {
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}
       </Head>
-      <body>
+      <body className={fontVariables}>
         <Main />
         <NextScript />
       </body>
