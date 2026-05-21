@@ -24,12 +24,12 @@ const NavBarMobile = (props: INavBar) => {
   const { routes, isToggledNavBarOpen, handleViewToggledNavBar } = props
 
   return (
-    <ToggledNavBarWrapper position="static" container>
+    <ToggledNavBarWrapper sx={{ position: 'static' }} container>
       <ToggledNavBar isToggledNavBarOpen={isToggledNavBarOpen} handleViewToggledNavBar={handleViewToggledNavBar}>
-        <Block item>
+        <Block>
           {routes.map((page) => (
             <LinkButton onClick={handleViewToggledNavBar} href={'#' + page.anchor} key={page.title}>
-              <Typography variant="h2" textTransform={'uppercase'}>
+              <Typography variant="h2" sx={{ textTransform: 'uppercase' }}>
                 {page.title}
               </Typography>
             </LinkButton>

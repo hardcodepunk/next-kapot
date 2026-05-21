@@ -15,12 +15,12 @@ import IconLink from '../../../Icons/IconLink'
 const Teacher = (props: ITeacher) => {
   const { name, instagramLink, timeSkating, age, description } = props
   return (
-    <Grid item xs={12} sm={6} md={6} lg={4}>
+    <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4 }}>
       <TeacherTitle variant="h1" component="h2">
         {name}
       </TeacherTitle>
       <Grid container>
-        <SocialsGrid item>
+        <SocialsGrid>
           {instagramLink && <IconLink ariaLabel="Check out the teacher's Instagram" link={instagramLink} icon={<Instagram />} />}
         </SocialsGrid>
       </Grid>

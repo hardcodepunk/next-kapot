@@ -18,7 +18,7 @@ import { IPlan } from './types'
 const Plans = (props: IPlan) => {
   const { title, price, description, list, buttonLink, buttonLabel } = props
   return (
-    <Grid item md={6} lg={6}>
+    <Grid size={{ md: 6, lg: 6 }}>
       <ItemTitle variant="h1" component="h2">
         {title}
       </ItemTitle>

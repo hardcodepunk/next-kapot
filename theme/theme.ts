@@ -1,9 +1,7 @@
 // MUI
 import { createTheme } from '@mui/material/styles'
 
-let theme = createTheme()
-
-theme = createTheme(theme, {
+const theme = createTheme({
   palette: {
     common: {
       black: '#000000',
@@ -19,7 +17,7 @@ theme = createTheme(theme, {
       fontFamily: 'var(--font-another-danger), serif',
       fontSize: '100px',
       letterSpacing: '-0.2rem',
-      [theme.breakpoints.down('lg')]: {
+      '@media (max-width:1199.95px)': {
         fontSize: '80px',
       },
     },
@@ -38,7 +36,7 @@ theme = createTheme(theme, {
       fontFamily: 'var(--font-futura-heavy), sans-serif',
       fontSize: '22px',
       letterSpacing: '-0.04rem',
-      [theme.breakpoints.down('lg')]: {
+      '@media (max-width:1199.95px)': {
         fontSize: '16px',
       },
     },
@@ -47,7 +45,7 @@ theme = createTheme(theme, {
       fontWeight: '800',
       lineHeight: '1.4em',
       letterSpacing: '0.075em',
-      [theme.breakpoints.down('lg')]: {
+      '@media (max-width:1199.95px)': {
         fontSize: '12px',
       },
     },

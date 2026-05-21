@@ -15,18 +15,18 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (
     <SectionFooter ref={ref}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justifyContent="center" alignItems="center" flexDirection={'column'}>
-            <Grid item>
+        <Grid size={12}>
+          <Grid container sx={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+            <Grid>
               <LogoKapot />
             </Grid>
-            <Grid item>
+            <Grid>
               <Typography variant="h1" component="h2">Kapot</Typography>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <Grid container justifyContent="center" alignItems="center">
+        <Grid size={12}>
+          <Grid container sx={{ justifyContent: 'center', alignItems: 'center' }}>
             <MailAddress variant="h3" component="span">
               kapot@echtalleskapot.be
             </MailAddress>
