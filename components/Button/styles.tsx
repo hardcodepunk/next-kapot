@@ -1,7 +1,7 @@
 // MUI
-import { Button as MuiButton, styled } from '@mui/material'
+import { Button as MuiButton, Theme, styled } from '@mui/material'
 
-const baseStyles = ({ theme }) => `
+const baseStyles = ({ theme }: { theme: Theme }) => `
   background: ${theme.palette.common.black};
   padding: 8px 20px;
   text-transform: uppercase;
@@ -18,7 +18,7 @@ const baseStyles = ({ theme }) => `
   }
 `
 
-const hoverStyles = ({ theme }) => `
+const hoverStyles = ({ theme }: { theme: Theme }) => `
   :hover,
   :active {
     color: ${theme.palette.common.black};
@@ -26,7 +26,7 @@ const hoverStyles = ({ theme }) => `
   }
 `
 
-const disabledStyles = ({ disabled }) => `
+const disabledStyles = ({ disabled }: { disabled?: boolean }) => `
   ${
     disabled &&
     `
@@ -35,7 +35,7 @@ const disabledStyles = ({ disabled }) => `
   }
 `
 
-const invertedStyles = ({ theme }) => `
+const invertedStyles = ({ theme }: { theme: Theme }) => `
   &.inverted {
     color: ${theme.palette.common.black};
     background: ${theme.palette.common.white}; 

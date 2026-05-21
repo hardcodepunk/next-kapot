@@ -1,66 +1,53 @@
 // Modules
-import { createRef, useEffect } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { useRouter } from 'next/router'
-import dynamic from 'next/dynamic'
 
 // Components
-const NavBar = dynamic(() => import('../components/NavBar'), { ssr: false })
+import NavBar from '../components/NavBar'
 import VideoDisplay from '../components/VideoDisplay'
-
-const SectionLearn = dynamic(() => import('../components/Sections/SectionLearn/WrappedSectionLearn'), { ssr: false })
-const SectionEvents = dynamic(() => import('../components/Sections/SectionEvents/WrappedSectionEvents'), { ssr: false })
-const SectionCollab = dynamic(() => import('../components/Sections/SectionCollab'), { ssr: false })
-const Footer = dynamic(() => import('../components/Sections/SectionFooter/WrappedSectionFooter'), { ssr: false })
-
-const routes = [
-  {
-    anchor: 'learn',
-    title: 'Learn',
-    linkRef: createRef<HTMLDivElement>(),
-  },
-  {
-    anchor: 'events',
-    title: 'Events',
-    linkRef: createRef<HTMLDivElement>(),
-  },
-  {
-    anchor: 'contact',
-    title: 'Contact',
-    linkRef: createRef<HTMLDivElement>(),
-  },
-]
+import SectionLearn from '../components/Sections/SectionLearn'
+import SectionEvents from '../components/Sections/SectionEvents'
+import SectionCollab from '../components/Sections/SectionCollab'
+import Footer from '../components/Sections/SectionFooter'
 
 const Home = () => {
   const router = useRouter()
   const path = router.asPath
 
-  const handleScrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = event.currentTarget.href
-    event.preventDefault()
+  const learnRef = useRef<HTMLDivElement>(null)
+  const eventsRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
 
-    routes?.map((el) => {
-      if (href.includes(el?.anchor)) {
-        el?.linkRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    })
+  const routes = useMemo(
+    () => [
+      { anchor: 'learn', title: 'Learn', linkRef: learnRef },
+      { anchor: 'events', title: 'Events', linkRef: eventsRef },
+      { anchor: 'contact', title: 'Contact', linkRef: contactRef },
+    ],
+    [],
+  )
+
+  const handleScrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault()
+    const href = event.currentTarget.href
+    const route = routes.find((r) => href.includes(r.anchor))
+    route?.linkRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   useEffect(() => {
-    if (path?.length > 2) {
-      routes?.map((el) => {
-        router.asPath.includes(el?.anchor) && el?.linkRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      })
-    }
-  }, [path, router.asPath])
+    if (!path.includes('#')) return
+    const route = routes.find((r) => path.includes(r.anchor))
+    route?.linkRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [path, routes])
 
   return (
     <>
       <NavBar routes={routes} handleScrollTo={handleScrollTo} />
       <VideoDisplay routes={routes} handleScrollTo={handleScrollTo} />
-      <SectionLearn sectionLearnRef={routes[0].linkRef} />
-      <SectionEvents sectionEventsRef={routes[1].linkRef} />
-      <SectionCollab></SectionCollab>
-      <Footer sectionFooterRef={routes[2].linkRef} />
+      <SectionLearn ref={routes[0].linkRef} />
+      <SectionEvents ref={routes[1].linkRef} />
+      <SectionCollab />
+      <Footer ref={routes[2].linkRef} />
     </>
   )
 }

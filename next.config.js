@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   async headers() {
     return [
       {
-        source: '/public/fonts/(.*)',
+        source: '/fonts/(.*)',
         headers: [
           {
             key: 'Cache-Control',

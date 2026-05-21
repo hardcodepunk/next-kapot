@@ -1,14 +1,14 @@
 // MUI
-import { Link, styled } from '@mui/material'
+import { Link, Theme, styled } from '@mui/material'
 
-const baseStyles = ({ theme }) => `
+const baseStyles = ({ theme }: { theme: Theme }) => `
   color: ${theme.palette.common.black};
   display: flex;
   transition: all 0.4s ease-out;
   margin: 6px;
 `
 
-const invertedStyles = ({ theme }) => `
+const invertedStyles = ({ theme }: { theme: Theme }) => `
   &.inverted {
     color: ${theme.palette.common.white};
 

@@ -48,6 +48,7 @@ export const VideoBody = styled('div')(
     ${theme.breakpoints.down('sm')} {
       max-width: 520px;
     }
+  }
   `,
 )
 
@@ -64,6 +65,7 @@ export const VideoCaption = styled(Typography)(
       letter-spacing: -0.1rem;
       line-height: 42px;
     }
+  }
   `,
 )
 
