@@ -1,13 +1,18 @@
-export const constantsEvents = [
+import { IEvent } from './types'
+
+export const constantsEvents: IEvent[] = [
   {
     title: 'Kapot Contest',
     location: 'Sportoase skatepark, Leuven',
     price: 'free',
-    date: 'TBA 2026',
+    date: '1st of August 2026',
+    startDate: '2026-08-01',
+    venueAddress: 'Philipssite 6, 3001 Leuven',
     description:
       "Belgian annual celebration of inline skating! Feel the vibes as skaters from all over the world come together to showcase their tricks. It's more than a contest; it's a family gathering where everyone's passion for rollerblading is shared. Come out and play!",
-    buttonLabel: 'To be announced',
-    disabledButton: true,
+    buttonLink: 'https://www.facebook.com/events/1298588894932094/',
+    buttonLabel: 'View event',
+    disabledButton: false,
   },
   {
     title: 'Nocturnus',
@@ -19,14 +24,4 @@ export const constantsEvents = [
     buttonLabel: 'To be announced',
     disabledButton: true,
   },
-  // {
-  //   title: 'Easter Camp',
-  //   location: 'Blaarmeersen, Gent',
-  //   price: 'TBA',
-  //   date: 'TBA',
-  //   description:
-  //     'A week-long inline skate camp during Easter. The camps are held in the Blaarmeersen skatepark in Gent. Open to inline skaters of all ages and skill levels. Led by Ryan who teaches trick focused inline skating or aggressive inline skating. A great way to learn new skills, make new friends, and have a great time on wheels. Only 10 spots available. When raining we have arranged SBA indoor skatepark as backup, it will be €5 extra per person to enter.',
-  //   buttonLabel: 'To be announced',
-  //   disabledButton: true,
-  // },
 ]
