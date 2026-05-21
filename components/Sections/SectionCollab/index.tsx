@@ -18,8 +18,8 @@ const SectionCollab = () => (
       </Grid>
       <Grid>
         <Grid container rowSpacing={{ xs: 1, md: 2, lg: 4 }} columnSpacing={{ xs: 4, md: 4, lg: 7 }} sx={{ alignItems: 'center', justifyContent: 'center' }}>
-          {logosBrands.map((logo, index) => (
-            <Grid key={index}>
+          {logosBrands.map((logo) => (
+            <Grid key={logo.alt}>
               <Logo src={logo.src} height={logo.height} alt={logo.alt}></Logo>
             </Grid>
           ))}

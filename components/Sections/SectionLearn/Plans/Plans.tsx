@@ -29,8 +29,8 @@ const Plans = (props: IPlan) => {
         {description}
       </Typography>
       <StyledList dense>
-        {list.map((item, index) => (
-          <ListItem key={index}>
+        {list.map((item) => (
+          <ListItem key={item}>
             <ListItemIcon>
               <AutoAwesome />
             </ListItemIcon>
