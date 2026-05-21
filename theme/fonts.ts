@@ -6,6 +6,7 @@ export const nunitoSans = Nunito_Sans({
   weight: ['400', '600', '700'],
   variable: '--font-nunito',
   display: 'swap',
+  adjustFontFallback: false,
 })
 
 export const anotherDanger = localFont({
