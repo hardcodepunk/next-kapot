@@ -7,11 +7,10 @@ const isBrowser = typeof document !== 'undefined'
 // This assures that MUI styles are loaded first.
 // It allows developers to easily override MUI styles with other styling solutions, like CSS modules.
 export default function createEmotionCache() {
-  let insertionPoint: HTMLMetaElement
+  let insertionPoint: HTMLMetaElement | undefined
 
   if (isBrowser) {
-    const emotionInsertionPoint = document.querySelector<HTMLMetaElement>('meta[name="emotion-insertion-point"]')
-    insertionPoint = emotionInsertionPoint ?? undefined
+    insertionPoint = document.querySelector<HTMLMetaElement>('meta[name="emotion-insertion-point"]') ?? undefined
   }
 
   return createCache({ key: 'mui-style', insertionPoint })
