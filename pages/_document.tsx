@@ -13,6 +13,7 @@ export default function MyDocument(props: DocumentHeadTagsProps) {
       <Head>
         <meta name="theme-color" content={theme.palette.primary.main} />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <DocumentHeadTags {...props} />
       </Head>
       <body className={fontVariables}>

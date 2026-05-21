@@ -1,5 +1,4 @@
 // Modules
-import Head from 'next/head'
 import { AppProps } from 'next/app'
 
 // MUI
@@ -10,6 +9,9 @@ import { AppCacheProvider } from '@mui/material-nextjs/v15-pagesRouter'
 // Vercel
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+
+// Components
+import Seo from '../components/Seo'
 
 // Theme
 import theme from '../theme/theme'
@@ -24,10 +26,7 @@ export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props
   return (
     <AppCacheProvider {...props}>
-      <Head>
-        <meta name="description" content="Learn to inline skate, attend rollerblade contests and events. By and for the inline community." />
-        <title>Kapot | Inline skate events, contests and lessons.</title>
-      </Head>
+      <Seo />
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
