@@ -3,12 +3,12 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://echtalleskapot.be/</loc>
+    <loc>https://www.echtalleskapot.be/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://echtalleskapot.be/images/splash_kapot-contest.jpg</image:loc>
+      <image:loc>https://www.echtalleskapot.be/images/splash_kapot-contest.jpg</image:loc>
       <image:title>Kapot Contest inline skating event</image:title>
     </image:image>
   </url>
