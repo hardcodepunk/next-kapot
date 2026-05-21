@@ -21,8 +21,8 @@ const VideoPlayer = () => {
       playsInline
       style={{ objectFit: 'cover', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
     >
+      <source src={cloudinaryWebmURL} type="video/webm" />
       <source src={cloudinaryMp4URL} type="video/mp4" />
-      <source src={cloudinaryWebmURL} type="video/mp4" />
     </video>
   )
 }
