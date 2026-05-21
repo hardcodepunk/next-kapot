@@ -21,7 +21,7 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
               <LogoKapot />
             </Grid>
             <Grid item>
-              <Typography variant="h1">Kapot</Typography>
+              <Typography variant="h1" component="h2">Kapot</Typography>
             </Grid>
           </Grid>
         </Grid>

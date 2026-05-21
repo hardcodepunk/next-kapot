@@ -52,7 +52,7 @@ export const VideoBody = styled('div')(
   `,
 )
 
-export const VideoCaption = styled(Typography)(
+export const VideoCaption = styled(Typography)<TypographyProps>(
   ({ theme }) => `
   && {
     color: #fff;

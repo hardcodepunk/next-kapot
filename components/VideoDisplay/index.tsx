@@ -11,7 +11,7 @@ const VideoDisplay = (props: IVideoDisplay) => {
       <Video />
       <Overlay></Overlay>
       <VideoBody>
-        <VideoCaption variant="h3">
+        <VideoCaption variant="h3" component="h1">
           Events and coaching all ages.<br></br>By and for the{' '}
           <Emphasis variant="h1" component="span">
             {' '}
