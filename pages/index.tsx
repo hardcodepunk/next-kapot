@@ -1,14 +1,16 @@
 // Modules
 import { useEffect, useMemo, useRef } from 'react'
 import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
 
 // Components
-import NavBar from '../components/NavBar'
+const NavBar = dynamic(() => import('../components/NavBar'), { ssr: false })
 import VideoDisplay from '../components/VideoDisplay'
-import SectionLearn from '../components/Sections/SectionLearn'
-import SectionEvents from '../components/Sections/SectionEvents'
-import SectionCollab from '../components/Sections/SectionCollab'
-import Footer from '../components/Sections/SectionFooter'
+
+const SectionLearn = dynamic(() => import('../components/Sections/SectionLearn/WrappedSectionLearn'), { ssr: false })
+const SectionEvents = dynamic(() => import('../components/Sections/SectionEvents/WrappedSectionEvents'), { ssr: false })
+const SectionCollab = dynamic(() => import('../components/Sections/SectionCollab'), { ssr: false })
+const Footer = dynamic(() => import('../components/Sections/SectionFooter/WrappedSectionFooter'), { ssr: false })
 
 const Home = () => {
   const router = useRouter()
@@ -44,10 +46,10 @@ const Home = () => {
     <>
       <NavBar routes={routes} handleScrollTo={handleScrollTo} />
       <VideoDisplay routes={routes} handleScrollTo={handleScrollTo} />
-      <SectionLearn ref={routes[0].linkRef} />
-      <SectionEvents ref={routes[1].linkRef} />
+      <SectionLearn sectionLearnRef={routes[0].linkRef} />
+      <SectionEvents sectionEventsRef={routes[1].linkRef} />
       <SectionCollab />
-      <Footer ref={routes[2].linkRef} />
+      <Footer sectionFooterRef={routes[2].linkRef} />
     </>
   )
 }
