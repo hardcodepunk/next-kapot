@@ -36,7 +36,7 @@ export const VideoBody = styled('div')(
     position: absolute;
     right: 7%;
     bottom: 10%;
-    z-index: 1;
+    z-index: ${theme.layers.base};
     max-width: 600px;
 
     ${theme.breakpoints.down('lg')} {

@@ -8,12 +8,12 @@ import { styled, Box, Grid } from '@mui/material'
 import { IBox, IButton, IToggle } from './types'
 
 export const Overlay = styled('div')<IBox>(
-  ({ open }) => `
+  ({ theme, open }) => `
     display: ${open ? 'block' : 'none'};
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: 900;
+    z-index: ${theme.layers.drawerOverlay};
   `,
 )
 
@@ -32,21 +32,21 @@ export const ToggledNavBarWrapper = styled(Box)<IBox>(
     right: 0;
     top: 0;
     align-items: center;
-    z-index: 1000;
+    z-index: ${theme.layers.drawer};
     transition: 0.2s width ease-out, 0.2s padding-left ease-out, 0.2s padding-right ease-out;
     overflow-y: scroll;
   `,
 )
 
 export const ToggleBtn = styled('button')<IButton>(
-  ({ open }) => `
+  ({ theme, open }) => `
   && {
     position: fixed;
     right: 40px;
     top: 30px;
     width: 40px;
     height: 40px;
-    z-index: 9001;
+    z-index: ${theme.layers.toggleBtn};
     cursor: pointer;
     border: 0;
     background: transparent;

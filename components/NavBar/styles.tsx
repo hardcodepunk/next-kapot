@@ -15,7 +15,7 @@ export const StyledNav = styled('nav')(
     color: ${theme.palette.common.white};
     width: 100%;
     position: absolute;
-    z-index: 9000;
+    z-index: ${theme.layers.navBar};
     padding: 45px 7%;
   `,
 )
@@ -25,7 +25,7 @@ export const StyledSplashIllustration = styled(Image)(
     position: absolute;
     left: 0;
     top: 90px;
-    z-index: 9001;
+    z-index: ${theme.layers.navSplash};
 
     ${theme.breakpoints.down('xl')} {
       top: 70px;
@@ -56,7 +56,7 @@ export const Menu = styled('ul')(
     }
 
     position: relative;
-    z-index: 9002;
+    z-index: ${theme.layers.navMenu};
 
     ${theme.breakpoints.down('lg')} {
       display: none;

@@ -11,7 +11,7 @@ export const ToggledNavBarWrapper = styled(Grid)(
     && {
       display: none;
       position: absolute;
-      z-index: 9500;
+      z-index: ${theme.layers.drawerPanel};
       
       ${theme.breakpoints.down('lg')} {
           display: flex;
@@ -58,9 +58,11 @@ export const SocialsBlock = styled(Grid)`
   padding-top: 12px;
 `
 
-export const StyledSplashIllustration = styled(Image)`
-  position: absolute;
-  left: 0;
-  bottom: 25%;
-  z-index: -1;
-`
+export const StyledSplashIllustration = styled(Image)(
+  ({ theme }) => `
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    z-index: ${theme.layers.background};
+  `,
+)

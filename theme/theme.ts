@@ -1,6 +1,43 @@
 // MUI
 import { createTheme } from '@mui/material/styles'
 
+interface Layers {
+  background: number
+  base: number
+  drawerOverlay: number
+  drawer: number
+  sectionDecor: number
+  navBar: number
+  navSplash: number
+  toggleBtn: number
+  navMenu: number
+  logo: number
+  drawerPanel: number
+}
+
+declare module '@mui/material/styles' {
+  interface Theme {
+    layers: Layers
+  }
+  interface ThemeOptions {
+    layers?: Layers
+  }
+}
+
+const layers: Layers = {
+  background: -1,
+  base: 1,
+  drawerOverlay: 900,
+  drawer: 1000,
+  sectionDecor: 8000,
+  navBar: 9000,
+  navSplash: 9001,
+  toggleBtn: 9001,
+  navMenu: 9002,
+  logo: 9003,
+  drawerPanel: 9500,
+}
+
 const theme = createTheme({
   palette: {
     common: {
@@ -50,6 +87,7 @@ const theme = createTheme({
       },
     },
   },
+  layers,
 })
 
 export default theme

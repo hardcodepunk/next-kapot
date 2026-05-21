@@ -89,7 +89,7 @@ export const MailAddress = styled(Typography)<TypographyProps>(
 )
 
 export const Container = styled(Grid)`
-  margin-top: 0;
+  margin-top: 2rem;
 `
 
 export const ItemTitle = styled(Typography)<TypographyProps>(
@@ -97,7 +97,7 @@ export const ItemTitle = styled(Typography)<TypographyProps>(
     text-transform: uppercase;
     font-size: 40px;
     letter-spacing: 2px;
-    
+
     ${theme.breakpoints.down('lg')} {
       font-size: 40px;
     }
@@ -201,7 +201,7 @@ export const StyledSplashIllustrationTop = styled(Image)(
     position: absolute;
     top: -5%;
     right: 0;
-    z-index: 8000;
+    z-index: ${theme.layers.sectionDecor};
     height: auto;
 
     ${theme.breakpoints.down('sm')} {
@@ -216,7 +216,7 @@ export const StyledSplashIllustrationBottom = styled(Image)(
     position: absolute;
     left: 0;
     bottom: 20%;
-    z-index: 8000;
+    z-index: ${theme.layers.sectionDecor};
     height: auto;
     
     ${theme.breakpoints.down('lg')} {
@@ -236,7 +236,7 @@ export const StyledSplashIllustrationBottomVariation1 = styled(Image)(
     position: absolute;
     left: 0;
     top: 7%;
-    z-index: -1;
+    z-index: ${theme.layers.background};
 
     ${theme.breakpoints.down('lg')} {
       width: 850px;
