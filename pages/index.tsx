@@ -1,5 +1,5 @@
 // Modules
-import { createRef, useEffect } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { useRouter } from 'next/router'
 
 // Components
@@ -10,27 +10,22 @@ import SectionEvents from '../components/Sections/SectionEvents'
 import SectionCollab from '../components/Sections/SectionCollab'
 import Footer from '../components/Sections/SectionFooter'
 
-const routes = [
-  {
-    anchor: 'learn',
-    title: 'Learn',
-    linkRef: createRef<HTMLDivElement>(),
-  },
-  {
-    anchor: 'events',
-    title: 'Events',
-    linkRef: createRef<HTMLDivElement>(),
-  },
-  {
-    anchor: 'contact',
-    title: 'Contact',
-    linkRef: createRef<HTMLDivElement>(),
-  },
-]
-
 const Home = () => {
   const router = useRouter()
   const path = router.asPath
+
+  const learnRef = useRef<HTMLDivElement>(null)
+  const eventsRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
+
+  const routes = useMemo(
+    () => [
+      { anchor: 'learn', title: 'Learn', linkRef: learnRef },
+      { anchor: 'events', title: 'Events', linkRef: eventsRef },
+      { anchor: 'contact', title: 'Contact', linkRef: contactRef },
+    ],
+    [],
+  )
 
   const handleScrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const href = event.currentTarget.href
