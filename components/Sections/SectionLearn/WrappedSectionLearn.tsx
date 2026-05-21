@@ -7,7 +7,7 @@ import SectionLearn from '.'
 // fix: wrap component in a custom component
 
 interface Props {
-  sectionLearnRef: RefObject<HTMLDivElement>
+  sectionLearnRef: RefObject<HTMLDivElement | null>
 }
 
 export default function WrappedSectionLearn({ sectionLearnRef, ...props }: Props) {

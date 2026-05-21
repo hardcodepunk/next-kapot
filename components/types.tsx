@@ -5,7 +5,7 @@ export interface IRoutes {
   routes: {
     anchor: string
     title: string
-    linkRef: RefObject<HTMLDivElement | undefined>
+    linkRef: RefObject<HTMLDivElement | null>
   }[]
   handleScrollTo: (event: React.MouseEvent<HTMLAnchorElement>) => void
 }
