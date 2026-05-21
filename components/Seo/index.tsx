@@ -11,7 +11,7 @@ import { ISeo } from './types'
 const SITE_URL = 'https://www.echtalleskapot.be'
 const DEFAULT_TITLE = 'Kapot | Inline skate events, contests and lessons.'
 const DEFAULT_DESCRIPTION = 'Learn to inline skate, attend rollerblade contests and events. By and for the inline community.'
-const DEFAULT_OG_IMAGE = '/images/splash_kapot-contest.jpg'
+const DEFAULT_OG_IMAGE = '/images/Gilles-Buelens-transfer-best-trick-kapot-contest.jpg'
 const ORG_EMAIL = 'kapot@echtalleskapot.be'
 const ORG_LOGO = '/images/illustrations/logo--white.svg'
 
@@ -87,8 +87,8 @@ const Seo = ({ title, description, ogImage, path, noindex }: ISeo) => {
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={absoluteOgImage} />
       <meta property="og:image:width" content="2048" />
-      <meta property="og:image:height" content="1367" />
-      <meta property="og:image:alt" content="Kapot Contest inline skating event" />
+      <meta property="og:image:height" content="1152" />
+      <meta property="og:image:alt" content="Gilles Buelens performing a transfer at the Kapot Contest, best trick winner" />
       <meta property="og:site_name" content="Kapot" />
       <meta property="og:locale" content="en_GB" />
 
@@ -96,7 +96,7 @@ const Seo = ({ title, description, ogImage, path, noindex }: ISeo) => {
       <meta name="twitter:title" content={resolvedTitle} />
       <meta name="twitter:description" content={resolvedDescription} />
       <meta name="twitter:image" content={absoluteOgImage} />
-      <meta name="twitter:image:alt" content="Kapot Contest inline skating event" />
+      <meta name="twitter:image:alt" content="Gilles Buelens performing a transfer at the Kapot Contest, best trick winner" />
 
       <script
         type="application/ld+json"
