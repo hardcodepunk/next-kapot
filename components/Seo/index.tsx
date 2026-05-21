@@ -93,6 +93,9 @@ const Seo = ({ title, description, ogImage, path, noindex }: ISeo) => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={absoluteOgImage} />
+      <meta property="og:image:width" content="2048" />
+      <meta property="og:image:height" content="1367" />
+      <meta property="og:image:alt" content="Kapot Contest inline skating event" />
       <meta property="og:site_name" content="Kapot" />
       <meta property="og:locale" content="en_GB" />
 
@@ -100,6 +103,7 @@ const Seo = ({ title, description, ogImage, path, noindex }: ISeo) => {
       <meta name="twitter:title" content={resolvedTitle} />
       <meta name="twitter:description" content={resolvedDescription} />
       <meta name="twitter:image" content={absoluteOgImage} />
+      <meta name="twitter:image:alt" content="Kapot Contest inline skating event" />
 
       <script
         type="application/ld+json"

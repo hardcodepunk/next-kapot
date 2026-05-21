@@ -1,0 +1,16 @@
+{
+  "name": "Kapot",
+  "short_name": "Kapot",
+  "description": "Learn to inline skate, attend rollerblade contests and events. By and for the inline community.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#fee502",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

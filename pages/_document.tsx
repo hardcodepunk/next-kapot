@@ -12,7 +12,11 @@ export default function MyDocument(props: DocumentHeadTagsProps) {
     <Html lang="en">
       <Head>
         <meta name="theme-color" content={theme.palette.primary.main} />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="format-detection" content="telephone=no" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <DocumentHeadTags {...props} />
       </Head>
