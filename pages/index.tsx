@@ -28,23 +28,17 @@ const Home = () => {
   )
 
   const handleScrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = event.currentTarget.href
     event.preventDefault()
-
-    routes?.map((el) => {
-      if (href.includes(el?.anchor)) {
-        el?.linkRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    })
+    const href = event.currentTarget.href
+    const route = routes.find((r) => href.includes(r.anchor))
+    route?.linkRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   useEffect(() => {
-    if (path?.length > 2) {
-      routes?.map((el) => {
-        router.asPath.includes(el?.anchor) && el?.linkRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      })
-    }
-  }, [path, router.asPath])
+    if (!path.includes('#')) return
+    const route = routes.find((r) => path.includes(r.anchor))
+    route?.linkRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [path, routes])
 
   return (
     <>
