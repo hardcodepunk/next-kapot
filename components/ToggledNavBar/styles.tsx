@@ -38,7 +38,7 @@ export const ToggledNavBarWrapper = styled(Box)<IBox>(
   `,
 )
 
-export const ToggleBtn = styled('span')<IButton>(
+export const ToggleBtn = styled('button')<IButton>(
   ({ open }) => `
   && {
     position: fixed;
@@ -47,7 +47,12 @@ export const ToggleBtn = styled('span')<IButton>(
     width: 40px;
     height: 40px;
     z-index: 9001;
-    cursor: pointer; 
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    font: inherit;
 
     .top, .middle, .bottom {
       display: block;
@@ -79,6 +84,7 @@ export const ToggleBtn = styled('span')<IButton>(
     .bottom {
       transform: ${open ? 'rotate(45deg)' : 'translate(0, 12px)'};
     }
+  }
 `,
 )
 

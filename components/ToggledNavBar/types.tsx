@@ -1,8 +1,8 @@
 // Modules
-import { ReactNode } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 // MUI
-import { BoxProps, ButtonProps } from '@mui/material'
+import { BoxProps } from '@mui/material'
 
 export interface IToggledNavBar {
   children: ReactNode
@@ -14,6 +14,6 @@ export interface IToggle {
   open: boolean
 }
 
-export interface IButton extends ButtonProps, IToggle {}
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>, IToggle {}
 
 export interface IBox extends BoxProps, IToggle {}
