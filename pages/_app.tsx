@@ -12,6 +12,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // Theme
 import theme from '../theme/theme'
+import { fontVariables } from '../theme/fonts'
 
 // Global styles
 import '../styles/globals.css'
@@ -37,7 +38,9 @@ export default function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <div className={fontVariables}>
+          <Component {...pageProps} />
+        </div>
         <Analytics />
         <SpeedInsights />
       </ThemeProvider>

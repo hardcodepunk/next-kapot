@@ -14,9 +14,9 @@ theme = createTheme(theme, {
     },
   },
   typography: {
-    fontFamily: ['Nunito Sans', 'Arial', 'sans-serif'].join(','),
+    fontFamily: ['var(--font-nunito)', 'Arial', 'sans-serif'].join(','),
     h1: {
-      fontFamily: 'AnotherDanger, serif',
+      fontFamily: 'var(--font-another-danger), serif',
       fontSize: '100px',
       letterSpacing: '-0.2rem',
       [theme.breakpoints.down('lg')]: {
@@ -24,18 +24,18 @@ theme = createTheme(theme, {
       },
     },
     h2: {
-      fontFamily: 'FuturaStdCondExtraBoldObl, sans-serif',
+      fontFamily: 'var(--font-futura-cebo), sans-serif',
       fontSize: '62px',
       letterSpacing: '-0.2rem',
     },
     h3: {
-      fontFamily: 'FuturaStdCondensedBold, sans-serif',
+      fontFamily: 'var(--font-futura-cb), sans-serif',
       fontSize: '51px',
       letterSpacing: '-0.15rem',
       textTransform: 'uppercase',
     },
     h4: {
-      fontFamily: 'FuturaStdHeavy, sans-serif',
+      fontFamily: 'var(--font-futura-heavy), sans-serif',
       fontSize: '22px',
       letterSpacing: '-0.04rem',
       [theme.breakpoints.down('lg')]: {

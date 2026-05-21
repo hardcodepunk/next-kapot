@@ -45,7 +45,7 @@ export const Section = styled(Grid)(
 export const SectionSubtitle = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
-      font-family: FuturaStdCondensedExtraBd, sans-serif;
+      font-family: var(--font-futura-cebd), sans-serif;
       text-transform: uppercase;
       font-size: 51px;
       margin-top: 90px;
@@ -70,7 +70,7 @@ export const SectionSubtitle = styled(Typography)<TypographyProps>(
 export const SectionSubtitleEmphasis = styled('span')(
   ({ theme }) => `
     && {
-      font-family: FuturaStdCondExtraBoldObl, sans-serif;
+      font-family: var(--font-futura-cebo), sans-serif;
       color: ${theme.palette.primary.main};
     }
   `,
@@ -108,7 +108,7 @@ export const ItemPrice = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
       margin: 24px 0;
-      font-family: FuturaStdCondensedExtraBd, sans-serif;
+      font-family: var(--font-futura-cebd), sans-serif;
       text-transform: lowercase;
       font-size: 17px;
     }
@@ -120,7 +120,7 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
     && {
       text-transform: uppercase;
       font-size: 14px;
-      font-family: FuturaStdCondExtraBoldObl, sans-serif;
+      font-family: var(--font-futura-cebo), sans-serif;
       margin: 4px 0;
 
       ${theme.breakpoints.down('sm')} {
@@ -163,7 +163,7 @@ export const TeacherTag = styled(Typography)<TypographyProps>(
     && {
       margin: 20px 0 10px;
       text-transform: uppercase;
-      font-family: FuturaStdCondensedExtraBd, sans-serif;
+      font-family: var(--font-futura-cebd), sans-serif;
     }
   `,
 )
@@ -182,7 +182,7 @@ export const StyledList = styled(List)(
         color: ${theme.palette.primary.main};
   
         .MuiListItemText-primary, .MuiListItemText-secondary {
-          font-family: FuturaStdCondExtraBoldObl, sans-serif;
+          font-family: var(--font-futura-cebo), sans-serif;
           font-size: 12px;
           text-transform: uppercase;
           color: ${theme.palette.primary.main};
