@@ -25,16 +25,9 @@ const sportsClubSchema = {
   description: DEFAULT_DESCRIPTION,
   sport: 'Inline skating',
   sameAs: constantsSocialMedia.map((s) => s.link),
-  location: {
-    '@type': 'SportsActivityLocation',
-    name: 'Sportoase Leuven',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Philipssite 6',
-      postalCode: '3001',
-      addressLocality: 'Leuven',
-      addressCountry: 'BE',
-    },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Belgium',
   },
 }
 
