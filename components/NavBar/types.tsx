@@ -1,4 +1,4 @@
 // Types
 import { IRoutes } from '../types'
 
-export interface INavbar extends IRoutes {}
+export type INavbar = IRoutes

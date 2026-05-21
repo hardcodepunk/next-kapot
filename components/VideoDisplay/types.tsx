@@ -1,4 +1,4 @@
 // Types
 import { IRoutes } from '../types'
 
-export interface IVideoDisplay extends IRoutes {}
+export type IVideoDisplay = IRoutes
