@@ -5,7 +5,7 @@ import { memo } from 'react'
 import { Grid } from '@mui/material'
 
 // Components
-import Button from './../../../Button'
+import Button from '../../../Button'
 
 // Styles
 import { ItemMeta, ItemPrice, ItemTitle } from '../../styles'
