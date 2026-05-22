@@ -1,70 +1,24 @@
 // Modules
 import Head from 'next/head'
 
-// Data
-import { constantsEvents } from '../Sections/SectionEvents/Events/constantsEvents'
-import { constantsSocialMedia } from '../SocialsBar/constantsSocialMedia'
+// Config
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_LOCALE,
+  DEFAULT_TITLE,
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  DEFAULT_OG_IMAGE_WIDTH,
+  DEFAULT_OG_IMAGE_HEIGHT,
+  DEFAULT_OG_IMAGE_ALT,
+} from './config'
+
+// Structured data
+import { sportsClubSchema, eventSchemas } from './jsonLd'
 
 // Types
 import { ISeo } from './types'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.echtalleskapot.be'
-const DEFAULT_TITLE = 'Kapot | Inline skate events, contests and lessons.'
-const DEFAULT_DESCRIPTION = 'Learn to inline skate, attend rollerblade contests and events. By and for the inline community.'
-const DEFAULT_OG_IMAGE = '/images/Gilles-Buelens-transfer-best-trick-kapot-contest.jpg'
-const ORG_EMAIL = 'kapot@echtalleskapot.be'
-const ORG_LOGO = '/images/illustrations/logo--white.svg'
-
-const sportsClubSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SportsClub',
-  name: 'Kapot',
-  url: SITE_URL,
-  logo: `${SITE_URL}${ORG_LOGO}`,
-  email: ORG_EMAIL,
-  description: DEFAULT_DESCRIPTION,
-  sport: 'Inline skating',
-  sameAs: constantsSocialMedia.map((s) => s.link),
-  areaServed: {
-    '@type': 'Country',
-    name: 'Belgium',
-  },
-}
-
-const eventSchemas = constantsEvents
-  .filter((event) => Boolean(event.startDate))
-  .map((event) => ({
-    '@context': 'https://schema.org',
-    '@type': 'SportsEvent',
-    name: event.title,
-    description: event.description,
-    startDate: event.startDate,
-    ...(event.endDate && { endDate: event.endDate }),
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    location: {
-      '@type': 'Place',
-      name: event.location,
-      ...(event.venueAddress && {
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: event.venueAddress,
-        },
-      }),
-    },
-    organizer: {
-      '@type': 'SportsClub',
-      name: 'Kapot',
-      url: SITE_URL,
-    },
-    offers: {
-      '@type': 'Offer',
-      price: event.price === 'free' ? '0' : event.price,
-      priceCurrency: 'EUR',
-      availability: event.disabledButton ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
-      ...(event.buttonLink && { url: event.buttonLink }),
-    },
-  }))
 
 const Seo = ({ title, description, ogImage, path, noindex }: ISeo) => {
   const resolvedTitle = title ?? DEFAULT_TITLE
@@ -86,17 +40,17 @@ const Seo = ({ title, description, ogImage, path, noindex }: ISeo) => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={absoluteOgImage} />
-      <meta property="og:image:width" content="2048" />
-      <meta property="og:image:height" content="1152" />
-      <meta property="og:image:alt" content="Gilles Buelens performing a transfer at the Kapot Contest, best trick winner" />
-      <meta property="og:site_name" content="Kapot" />
-      <meta property="og:locale" content="en_GB" />
+      <meta property="og:image:width" content={String(DEFAULT_OG_IMAGE_WIDTH)} />
+      <meta property="og:image:height" content={String(DEFAULT_OG_IMAGE_HEIGHT)} />
+      <meta property="og:image:alt" content={DEFAULT_OG_IMAGE_ALT} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content={SITE_LOCALE} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={resolvedTitle} />
       <meta name="twitter:description" content={resolvedDescription} />
       <meta name="twitter:image" content={absoluteOgImage} />
-      <meta name="twitter:image:alt" content="Gilles Buelens performing a transfer at the Kapot Contest, best trick winner" />
+      <meta name="twitter:image:alt" content={DEFAULT_OG_IMAGE_ALT} />
 
       <script
         type="application/ld+json"
