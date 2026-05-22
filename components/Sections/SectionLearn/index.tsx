@@ -9,7 +9,8 @@ import SplashIllustrationTop from './../../../public/images/illustrations/paint-
 import SplashIllustrationBottom from './../../../public/images/illustrations/paint-splash-3.svg'
 
 // Styles
-import { Section, StyledSplashIllustrationBottom, StyledSplashIllustrationTop, SectionSubtitle, SectionSubtitleEmphasis } from '../styles'
+import { Section, SectionSubtitle, SectionSubtitleEmphasis } from '../styles'
+import { StyledSplashIllustrationBottom, StyledSplashIllustrationTop } from './styles'
 import ContainerPlans from './Plans'
 import ContainerTeachers from './Teachers'
 

@@ -11,7 +11,8 @@ import { Typography } from '@mui/material'
 import SplashIllustrationBottomVariation1 from './../../../public/images/illustrations/paint-splash-4.svg'
 
 // Styles
-import { SectionSubtitle, SectionSubtitleEmphasis, StyledSplashIllustrationBottomVariation1, Section } from '../styles'
+import { Section, SectionSubtitle, SectionSubtitleEmphasis } from '../styles'
+import { StyledSplashIllustrationBottomVariation1 } from './styles'
 
 const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) {
   return (

@@ -8,7 +8,8 @@ import { Grid } from '@mui/material'
 import Button from './../../../Button'
 
 // Styles
-import { ItemBody, ItemMeta, ItemPrice, ItemTitle } from '../../styles'
+import { ItemMeta, ItemPrice, ItemTitle } from '../../styles'
+import { ItemBody } from './styles'
 
 // Types
 import { IEvent } from './types'

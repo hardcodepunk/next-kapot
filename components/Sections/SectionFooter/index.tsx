@@ -9,7 +9,7 @@ import SocialsBar from '../../SocialsBar'
 import LogoKapot from '../../Icons/Logo/LogoKapot'
 
 // Styles
-import { MailAddress, SectionFooter } from './../styles'
+import { MailAddress, SectionFooter } from './styles'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (

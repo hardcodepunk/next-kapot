@@ -6,7 +6,8 @@ import { Grid } from '@mui/material'
 import { Instagram } from '@mui/icons-material'
 
 // Styles
-import { SocialsGrid, ItemMeta, TeacherBody, TeacherTitle } from '../../styles'
+import { ItemMeta } from '../../styles'
+import { SocialsGrid, TeacherBody, TeacherTitle } from './styles'
 
 // Types
 import { ITeacher } from './types'

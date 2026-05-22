@@ -10,7 +10,8 @@ import { AutoAwesome } from '@mui/icons-material'
 const Button = dynamic(() => import('../../../Button'), { ssr: false })
 
 // Styles
-import { ItemPrice, ItemTitle, StyledList } from '../../styles'
+import { ItemPrice, ItemTitle } from '../../styles'
+import { StyledList } from './styles'
 
 // Types
 import { IPlan } from './types'
