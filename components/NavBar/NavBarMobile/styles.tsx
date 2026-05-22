@@ -7,13 +7,11 @@ import { styled } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
 export const ToggledNavBarWrapper = styled(Grid)(({ theme }) => ({
-  '&&': {
-    display: 'none',
-    position: 'absolute',
-    zIndex: theme.layers.drawerPanel,
-    [theme.breakpoints.down('lg')]: {
-      display: 'flex',
-    },
+  display: 'none',
+  position: 'absolute',
+  zIndex: theme.layers.drawerPanel,
+  [theme.breakpoints.down('lg')]: {
+    display: 'flex',
   },
 }))
 
@@ -23,23 +21,21 @@ export const Block = styled(Grid)({
 })
 
 export const LinkButton = styled(Link)(({ theme }) => ({
-  '&&': {
-    background: 'transparent',
-    color: theme.palette.common.white,
-    fontSize: '18px',
-    fontStyle: 'normal',
-    fontWeight: 500,
-    lineHeight: '22px',
-    marginBottom: '32px',
-    textDecoration: 'none',
-    transition: 'color 0.2s ease-out',
-    display: 'flex',
-    '&:first-of-type': {
-      marginTop: '40px',
-    },
-    '&:hover': {
-      color: theme.palette.primary.main,
-    },
+  background: 'transparent',
+  color: theme.palette.common.white,
+  fontSize: '18px',
+  fontStyle: 'normal',
+  fontWeight: 500,
+  lineHeight: '22px',
+  marginBottom: '32px',
+  textDecoration: 'none',
+  transition: 'color 0.2s ease-out',
+  display: 'flex',
+  '&:first-of-type': {
+    marginTop: '40px',
+  },
+  '&:hover': {
+    color: theme.palette.primary.main,
   },
 }))
 

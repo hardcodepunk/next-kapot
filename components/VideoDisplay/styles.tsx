@@ -31,47 +31,41 @@ export const Overlay = styled('div')({
 })
 
 export const VideoBody = styled('div')(({ theme }) => ({
-  '&&': {
-    position: 'absolute',
-    right: '7%',
-    bottom: '10%',
-    zIndex: theme.layers.base,
-    maxWidth: '600px',
-    [theme.breakpoints.down('lg')]: {
-      right: 'auto',
-      left: '7%',
-      bottom: '20%',
-    },
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '520px',
-    },
+  position: 'absolute',
+  right: '7%',
+  bottom: '10%',
+  zIndex: theme.layers.base,
+  maxWidth: '600px',
+  [theme.breakpoints.down('lg')]: {
+    right: 'auto',
+    left: '7%',
+    bottom: '20%',
+  },
+  [theme.breakpoints.down('sm')]: {
+    maxWidth: '520px',
   },
 }))
 
 export const VideoCaption = styled(Typography)<TypographyProps>(({ theme }) => ({
-  '&&': {
-    color: '#fff',
-    transition: 'opacity 0.4s ease-out',
-    fontSize: '42px',
-    lineHeight: '52px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '30px',
-      letterSpacing: '-0.1rem',
-      lineHeight: '42px',
-    },
+  color: '#fff',
+  transition: 'opacity 0.4s ease-out',
+  fontSize: '42px',
+  lineHeight: '52px',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '30px',
+    letterSpacing: '-0.1rem',
+    lineHeight: '42px',
   },
 }))
 
 export const CallToAction = styled(ButtonCtaScrollTo)({})
 
 export const Emphasis = styled(Typography)<TypographyProps>(({ theme }) => ({
-  '&&': {
-    fontSize: '47px',
-    letterSpacing: '2px',
-    verticalAlign: 'bottom',
-    color: theme.palette.primary.main,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '37px',
-    },
+  fontSize: '47px',
+  letterSpacing: '2px',
+  verticalAlign: 'bottom',
+  color: theme.palette.primary.main,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '37px',
   },
 }))

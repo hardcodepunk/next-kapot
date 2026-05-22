@@ -35,38 +35,36 @@ export const ToggledNavBarWrapper = styled(Box)<IBox>(({ theme, open }) => ({
 }))
 
 export const ToggleBtn = styled('button')<IButton>(({ theme, open }) => ({
-  '&&': {
-    position: 'fixed',
-    right: '40px',
-    top: '30px',
-    width: '40px',
-    height: '40px',
-    zIndex: theme.layers.toggleBtn,
-    cursor: 'pointer',
-    border: 0,
-    background: 'transparent',
-    padding: 0,
-    color: 'inherit',
-    font: 'inherit',
-    '& .top, & .middle, & .bottom': {
-      display: 'block',
-      position: 'absolute',
-      left: 0,
-      top: '50%',
-      width: '100%',
-      margin: '-2px 0 0',
-      transformOrigin: '50%',
-      transition: 'all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955)',
-    },
-    '& .top': {
-      transform: open ? 'rotate(-45deg)' : 'translate(0, -12px)',
-    },
-    '& .middle': {
-      opacity: open ? 0 : 1,
-    },
-    '& .bottom': {
-      transform: open ? 'rotate(45deg)' : 'translate(0, 12px)',
-    },
+  position: 'fixed',
+  right: '40px',
+  top: '30px',
+  width: '40px',
+  height: '40px',
+  zIndex: theme.layers.toggleBtn,
+  cursor: 'pointer',
+  border: 0,
+  background: 'transparent',
+  padding: 0,
+  color: 'inherit',
+  font: 'inherit',
+  '& .top, & .middle, & .bottom': {
+    display: 'block',
+    position: 'absolute',
+    left: 0,
+    top: '50%',
+    width: '100%',
+    margin: '-2px 0 0',
+    transformOrigin: '50%',
+    transition: 'all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955)',
+  },
+  '& .top': {
+    transform: open ? 'rotate(-45deg)' : 'translate(0, -12px)',
+  },
+  '& .middle': {
+    opacity: open ? 0 : 1,
+  },
+  '& .bottom': {
+    transform: open ? 'rotate(45deg)' : 'translate(0, 12px)',
   },
 }))
 
