@@ -8,7 +8,7 @@ import { constantsSocialMedia } from '../SocialsBar/constantsSocialMedia'
 // Types
 import { ISeo } from './types'
 
-const SITE_URL = 'https://www.echtalleskapot.be'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.echtalleskapot.be'
 const DEFAULT_TITLE = 'Kapot | Inline skate events, contests and lessons.'
 const DEFAULT_DESCRIPTION = 'Learn to inline skate, attend rollerblade contests and events. By and for the inline community.'
 const DEFAULT_OG_IMAGE = '/images/Gilles-Buelens-transfer-best-trick-kapot-contest.jpg'

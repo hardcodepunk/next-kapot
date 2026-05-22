@@ -3,9 +3,11 @@ import { RefObject } from 'react'
 // Components
 import Footer from '.'
 
-// `forwardRef` error when dynamically importing a module in Next.js
-// fix: wrap component in a custom component
-
+/**
+ * DO NOT REMOVE — see WrappedSectionLearn for the full rationale.
+ * Short version: dynamic({ ssr: false }) + forwardRef + MUI emotion breaks
+ * silently in the browser when this wrapper is bypassed.
+ */
 interface Props {
   sectionFooterRef: RefObject<HTMLDivElement | null>
 }
