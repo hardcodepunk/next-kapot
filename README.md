@@ -65,7 +65,6 @@ All content is in TypeScript constant files — there's no CMS. To update:
 
 ## Load-bearing things you shouldn't change without reading first
 
-- **`components/Sections/Section*/Wrapped*.tsx`** — three shim files (`WrappedSectionLearn`, `WrappedSectionEvents`, `WrappedSectionFooter`) exist purely because `pages/index.tsx` loads sections via `dynamic({ ssr: false })`, and Next's dynamic imports don't forward `ref` to a `forwardRef` component cleanly. Each wrapper accepts the ref as a regular prop and passes it through. We have tried twice to collapse these into direct static imports and both times it broke production styling silently in the browser while SSR curl probes looked fine. Don't delete them without thorough cross-browser visual verification.
 - **`pages/_app.tsx` side-effect import of `../theme/fonts`** — needed so `next/font`'s build plugin processes the local fonts into the client bundle. The CSS variables are applied to `<body>` in `_document.tsx`.
 
 ## SEO / structured data

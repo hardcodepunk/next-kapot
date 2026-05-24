@@ -1,5 +1,5 @@
 // Modules
-import { forwardRef } from 'react'
+import { Ref } from 'react'
 
 // Components
 import ContainerEvents from './Events'
@@ -14,20 +14,22 @@ import SplashIllustrationBottomVariation1 from './../../../public/images/illustr
 import { Section, SectionSubtitle, SectionSubtitleEmphasis } from '../styles'
 import { StyledSplashIllustrationBottomVariation1 } from './styles'
 
-const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) {
-  return (
-    <Section ref={ref}>
-      <Typography variant="h1" component="h2">
-        Events
-      </Typography>
-      <SectionSubtitle variant="h2">
-        Shouldering <SectionSubtitleEmphasis>Kapot Contest</SectionSubtitleEmphasis> <br></br>
-        and other internationally recognised events.
-      </SectionSubtitle>
-      <ContainerEvents />
-      <StyledSplashIllustrationBottomVariation1 src={SplashIllustrationBottomVariation1} alt="" width={950} />
-    </Section>
-  )
-})
+interface SectionEventsProps {
+  ref?: Ref<HTMLDivElement>
+}
+
+const SectionEvents = ({ ref }: SectionEventsProps) => (
+  <Section ref={ref}>
+    <Typography variant="h1" component="h2">
+      Events
+    </Typography>
+    <SectionSubtitle variant="h2">
+      Shouldering <SectionSubtitleEmphasis>Kapot Contest</SectionSubtitleEmphasis> <br></br>
+      and other internationally recognised events.
+    </SectionSubtitle>
+    <ContainerEvents />
+    <StyledSplashIllustrationBottomVariation1 src={SplashIllustrationBottomVariation1} alt="" width={950} />
+  </Section>
+)
 
 export default SectionEvents

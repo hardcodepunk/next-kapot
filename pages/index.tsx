@@ -1,24 +1,14 @@
 // Modules
 import { useEffect, useMemo, useRef } from 'react'
 import { useRouter } from 'next/router'
-import dynamic from 'next/dynamic'
 
 // Components
-//
-// Sections are loaded via dynamic({ ssr: false }) and go through Wrapped*
-// shim files that turn the ref into a regular prop. This is a load-bearing
-// workaround for a silent styling break in the browser when forwardRef
-// section components are SSR-rendered with the MUI emotion cache.
-// We tried collapsing this to static imports + direct refs twice — both
-// times it broke production styling while SSR curl probes looked fine.
-// Do not flatten this without thorough cross-browser visual verification.
-const NavBar = dynamic(() => import('../components/NavBar'), { ssr: false })
+import NavBar from '../components/NavBar'
 import VideoDisplay from '../components/VideoDisplay'
-
-const SectionLearn = dynamic(() => import('../components/Sections/SectionLearn/WrappedSectionLearn'), { ssr: false })
-const SectionEvents = dynamic(() => import('../components/Sections/SectionEvents/WrappedSectionEvents'), { ssr: false })
-const SectionCollab = dynamic(() => import('../components/Sections/SectionCollab'), { ssr: false })
-const Footer = dynamic(() => import('../components/Sections/SectionFooter/WrappedSectionFooter'), { ssr: false })
+import SectionLearn from '../components/Sections/SectionLearn'
+import SectionEvents from '../components/Sections/SectionEvents'
+import SectionCollab from '../components/Sections/SectionCollab'
+import Footer from '../components/Sections/SectionFooter'
 
 const Home = () => {
   const router = useRouter()
@@ -54,10 +44,10 @@ const Home = () => {
     <>
       <NavBar routes={routes} handleScrollTo={handleScrollTo} />
       <VideoDisplay routes={routes} handleScrollTo={handleScrollTo} />
-      <SectionLearn sectionLearnRef={routes[0].linkRef} />
-      <SectionEvents sectionEventsRef={routes[1].linkRef} />
+      <SectionLearn ref={routes[0].linkRef} />
+      <SectionEvents ref={routes[1].linkRef} />
       <SectionCollab />
-      <Footer sectionFooterRef={routes[2].linkRef} />
+      <Footer ref={routes[2].linkRef} />
     </>
   )
 }

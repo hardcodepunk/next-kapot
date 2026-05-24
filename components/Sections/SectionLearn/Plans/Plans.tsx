@@ -1,13 +1,12 @@
 // Modules
 import { memo } from 'react'
-import dynamic from 'next/dynamic'
 
 // MUI
 import { Grid, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import { AutoAwesome } from '@mui/icons-material'
 
 // Components
-const Button = dynamic(() => import('../../../Button'), { ssr: false })
+import Button from '../../../Button'
 
 // Styles
 import { ItemPrice, ItemTitle } from '../../styles'
