@@ -6,10 +6,6 @@ import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
 import { AppCacheProvider } from '@mui/material-nextjs/v15-pagesRouter'
 
-// Vercel
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-
 // Components
 import Seo from '../components/Seo'
 
@@ -30,8 +26,6 @@ export default function MyApp(props: AppProps) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
-        <Analytics />
-        <SpeedInsights />
       </ThemeProvider>
     </AppCacheProvider>
   )
