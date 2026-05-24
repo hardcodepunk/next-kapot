@@ -1,17 +1,14 @@
-// Cloudinary auto-format + eco-quality transformations let Cloudinary pick the
-// best codec for each browser (AV1/HEVC/VP9) and slim the bitrate. The mobile
-// variant additionally serves the video at 768px wide.
+// Desktop serves the original encoding (~1.8 MB, full quality). Mobile gets
+// the same source resized to 768px wide via Cloudinary, saving ~50% bandwidth
+// without re-encoding quality loss.
 const BASE = 'https://res.cloudinary.com/hardcodepunk/video/upload'
 const WEBM_ID = 'v1701949596/zfrqvj08czjna2zaupf8.webm'
 const MP4_ID = 'v1701940586/cw2egrtiegzaljg3347k.mp4'
 
-const desktopTransform = 'f_auto,q_auto:eco'
-const mobileTransform = 'f_auto,q_auto:eco,w_768'
-
-const webmDesktop = `${BASE}/${desktopTransform}/${WEBM_ID}`
-const webmMobile = `${BASE}/${mobileTransform}/${WEBM_ID}`
-const mp4Desktop = `${BASE}/${desktopTransform}/${MP4_ID}`
-const mp4Mobile = `${BASE}/${mobileTransform}/${MP4_ID}`
+const webmDesktop = `${BASE}/${WEBM_ID}`
+const webmMobile = `${BASE}/w_768/${WEBM_ID}`
+const mp4Desktop = `${BASE}/${MP4_ID}`
+const mp4Mobile = `${BASE}/w_768/${MP4_ID}`
 
 const VideoPlayer = () => (
   <video
