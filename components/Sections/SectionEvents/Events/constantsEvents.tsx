@@ -2,16 +2,14 @@ import { IEvent } from './types'
 
 export const constantsEvents: IEvent[] = [
   {
-    title: 'Kapot Contest',
-    location: 'Sportoase skatepark, Leuven',
+    title: 'Kapot Contest 2027',
+    location: 'Location TBA',
     price: 'free',
-    date: '1st of August 2026',
-    startDate: '2026-08-01',
-    venueAddress: 'Philipssite 6, 3001 Leuven',
+    date: 'Date TBA',
     description:
       "Belgian annual celebration of inline skating! Feel the vibes as skaters from all over the world come together to showcase their tricks. It's more than a contest; it's a family gathering where everyone's passion for rollerblading is shared. Come out and play!",
     buttonLink: 'https://www.facebook.com/events/1298588894932094/',
-    buttonLabel: 'View event',
+    buttonLabel: 'See the 2026 edition',
     disabledButton: false,
   },
   {
