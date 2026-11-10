@@ -1,22 +1,28 @@
 // Media
-import LogoPowerslide from './../../../public/images/illustrations/sponsor__powerslide.svg'
-import LogoGrindhouse from './../../../public/images/illustrations/sponsor__grindhouse.svg'
-import LogoSkateheaven from './../../../public/images/illustrations/sponsor__skateheaven.svg'
-import LogoKaltik from './../../../public/images/illustrations/sponsor__kaltik.svg'
+import LogoSkatepro from './../../../public/images/illustrations/sponsor__skatepro.svg'
+import LogoReign from './../../../public/images/illustrations/sponsor__reign.svg'
+import LogoGroundControl from './../../../public/images/illustrations/sponsor__ground-control.svg'
+import LogoRazors from './../../../public/images/illustrations/sponsor__razors.svg'
 import LogoFr from './../../../public/images/illustrations/sponsor__fr.svg'
-import LogoMijnleuven from './../../../public/images/illustrations/sponsor__mijnleuven.svg'
 import LogoSlidingtiger from './../../../public/images/illustrations/sponsor__sliding-tiger.svg'
-import LogoPowsey from './../../../public/images/illustrations/sponsor__powsey.svg'
-import LogoLetmeout from './../../../public/images/illustrations/sponsor__let-me-out.svg'
+import LogoMesmer from './../../../public/images/illustrations/sponsor__mesmer.svg'
+import LogoKizer from './../../../public/images/illustrations/sponsor__kizer.svg'
+import LogoUndercover from './../../../public/images/illustrations/sponsor__undercover.svg'
+import LogoTrickDeck from './../../../public/images/illustrations/sponsor__trick-deck.svg'
+import LogoVlaamsBrabant from './../../../public/images/illustrations/sponsor__vlaams-brabant.svg'
+import LogoMijnleuven from './../../../public/images/illustrations/sponsor__mijnleuven.svg'
 
 export const logosBrands = [
-  { src: LogoPowerslide, height: 55, alt: 'Logo Powerslide' },
-  { src: LogoGrindhouse, height: 40, alt: 'Logo Grindhouse' },
-  { src: LogoSkateheaven, height: 65, alt: 'Logo Skateheaven' },
-  { src: LogoKaltik, height: 20, alt: 'Logo Kaltik' },
-  { src: LogoFr, height: 55, alt: 'Logo FR Skates' },
-  { src: LogoMijnleuven, height: 100, alt: 'Logo Mijnleuven' },
-  { src: LogoSlidingtiger, height: 75, alt: 'Logo Sliding Tiger' },
-  { src: LogoPowsey, height: 30, alt: 'Logo Powsey' },
-  { src: LogoLetmeout, height: 50, alt: 'Logo Let Me Out' },
+  { src: LogoSkatepro, height: 40, alt: 'Logo SkatePro', link: 'https://www.skatepro.com/' },
+  { src: LogoReign, height: 60, alt: 'Logo Reign Liners', link: 'https://sunshinedistribution.com/collections/reign' },
+  { src: LogoGroundControl, height: 50, alt: 'Logo Ground Control', link: 'https://sunshinedistribution.com/collections/ground-control' },
+  { src: LogoRazors, height: 50, alt: 'Logo Razors Skate Co', link: 'https://www.razorskate.com/' },
+  { src: LogoFr, height: 55, alt: 'Logo FR Skates', link: 'https://frskates.com/' },
+  { src: LogoSlidingtiger, height: 75, alt: 'Logo Sliding Tiger', link: 'https://www.slidingtiger.eu/' },
+  { src: LogoMesmer, height: 30, alt: 'Logo Mesmer Skates', link: 'https://mesmerskates.com/' },
+  { src: LogoKizer, height: 28, alt: 'Logo Kizer Frames', link: 'https://powerslide.com/pages/kizer-homepage' },
+  { src: LogoUndercover, height: 28, alt: 'Logo Undercover Wheels', link: 'https://powerslide.com/pages/uc-homepage' },
+  { src: LogoTrickDeck, height: 60, alt: 'Logo Trick Deck', link: 'https://thetrickdeck.com/' },
+  { src: LogoVlaamsBrabant, height: 40, alt: 'Logo Provincie Vlaams-Brabant', link: 'https://www.vlaamsbrabant.be/' },
+  { src: LogoMijnleuven, height: 22, alt: 'Logo Mijnleuven', link: 'https://www.mijnleuven.be/' },
 ]
