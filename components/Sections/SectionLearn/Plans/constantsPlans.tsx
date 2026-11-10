@@ -24,9 +24,10 @@ export const constantsPlans: IPlan[] = [
     description: [
       "You'll be privately taught to inline skate by one of our teachers. We have one pair of adaptable size junior aggressive inline skates to try out for children. Ask beforehand, not always available! All ages and levels welcome.",
     ],
-    list: ['private lesson'],
+    list: ['all ages and levels welcome', 'junior skates to try out'],
     details: [
       { label: 'When', value: ['By appointment'] },
+      { label: 'Where', value: ['Leuven, Brussels, Antwerp, Gent', 'Anywhere in the Benelux'] },
       { label: 'Ages', value: ['All ages'] },
     ],
     buttonLink: 'https://calendly.com/kapot/private-session',
