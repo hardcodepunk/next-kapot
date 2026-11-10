@@ -9,6 +9,7 @@ import { logosBrands } from './constantsLogosBrands'
 
 // Styles
 import { Section } from '../styles'
+import { SponsorLink } from './styles'
 
 const SectionCollab = () => (
   <Section className="slim inverted">
@@ -25,9 +26,9 @@ const SectionCollab = () => (
         >
           {logosBrands.map((logo) => (
             <Grid key={logo.alt}>
-              <a href={logo.link} target="_blank" rel="noopener noreferrer">
-                <Logo src={logo.src} height={logo.height} alt={logo.alt}></Logo>
-              </a>
+              <SponsorLink href={logo.link} target="_blank" rel="noopener">
+                <Logo src={logo.src} height={logo.height} alt={`${logo.alt} (opens in a new tab)`}></Logo>
+              </SponsorLink>
             </Grid>
           ))}
         </Grid>
