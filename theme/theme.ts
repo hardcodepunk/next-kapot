@@ -82,8 +82,15 @@ const theme = createTheme({
       fontWeight: '800',
       lineHeight: '1.4em',
       letterSpacing: '0.075em',
+    },
+    overline: {
+      fontFamily: 'var(--font-futura-cebo), sans-serif',
+      fontSize: '16px',
+      lineHeight: '1.4em',
+      letterSpacing: '0.02em',
+      textTransform: 'uppercase',
       '@media (max-width:1199.95px)': {
-        fontSize: '12px',
+        fontSize: '14px',
       },
     },
   },

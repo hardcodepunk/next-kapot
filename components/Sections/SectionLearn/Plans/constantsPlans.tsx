@@ -1,19 +1,34 @@
-export const constantsPlans = [
+import { IPlan } from './types'
+
+export const constantsPlans: IPlan[] = [
   {
     title: 'Sunday Group Class',
     price: '10 lessons for €80',
-    description:
-      "Group sessions at skatepark Sportoase, Leuven. 10 lessons for 80 euro. From 10:30am til' 12. Learn the basics of aggressive inline skating. Min 9 years old. Protection gear and helmet obligatory! We'll also ask you to be member of our organisation for €40 a year. This provides you a sports insurance.",
-    list: ['group lesson', 'coached by OG pro skater David (Sharp)'],
+    description: [
+      "Inline skating lessons for all levels at Sportoase skatepark, Leuven. Learn aggressive inline skating (rollerblading) in a group. Min 6 years old. Protection gear and helmet obligatory! We're a skate club under Skate Vlaanderen, so we'll ask you to become a member for €40 a year. Your membership includes sports insurance, also internationally.",
+      "When it rains, we move to Stelplaats indoor skatepark. We'll let you know before the session.",
+    ],
+    list: ['all levels, beginners welcome', 'coached by OG pro skater David (Sharp)', 'helmet and protection obligatory'],
+    details: [
+      { label: 'Every Sunday', value: ['9:30–11:00', '11:00–12:30'] },
+      { label: 'Ages', value: ['Youth 6–22', 'Adults 23+'] },
+      { label: 'Leuven, Belgium', value: ['Sportoase skatepark', 'Stelplaats indoor skatepark'] },
+      { label: 'Membership', value: ['€40 per year', 'Insurance included'] },
+    ],
     buttonLink: 'https://tally.so/r/wAY26B',
     buttonLabel: 'Register',
   },
   {
     title: 'Private session',
     price: '€40 per hour',
-    description:
+    description: [
       "You'll be privately taught to inline skate by one of our teachers. We have one pair of adaptable size junior aggressive inline skates to try out for children. Ask beforehand, not always available! All ages and levels welcome.",
+    ],
     list: ['private lesson'],
+    details: [
+      { label: 'When', value: ['By appointment'] },
+      { label: 'Ages', value: ['All ages'] },
+    ],
     buttonLink: 'https://calendly.com/kapot/private-session',
     buttonLabel: 'Book session',
   },
