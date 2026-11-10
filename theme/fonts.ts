@@ -1,9 +1,8 @@
-import { Nunito_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 
-export const nunitoSans = Nunito_Sans({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
+export const nunitoSans = localFont({
+  src: '../public/fonts/NunitoSans.woff2',
+  weight: '400 700',
   variable: '--font-nunito',
   display: 'swap',
   adjustFontFallback: false,
