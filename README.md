@@ -9,7 +9,7 @@ Production: <https://www.echtalleskapot.be>
 - Next.js 15 (Pages Router) + React 19
 - TypeScript 6 (strict)
 - MUI 9 with `@mui/material-nextjs` integration + emotion
-- Self-hosted fonts via `next/font`
+- Self-hosted fonts via `next/font/local` (all font files live in `public/fonts`, no build-time Google Fonts fetch)
 - Vercel for hosting + analytics + speed insights
 
 ## Getting started
