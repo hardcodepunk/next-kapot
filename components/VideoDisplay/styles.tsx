@@ -84,6 +84,9 @@ export const Emphasis = styled(Typography)<TypographyProps>(({ theme }) => ({
   letterSpacing: '2px',
   verticalAlign: 'bottom',
   color: theme.palette.primary.main,
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '47px',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '37px',
   },
