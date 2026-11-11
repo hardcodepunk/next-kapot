@@ -24,7 +24,7 @@ const NavBarMobile = (props: INavBar) => {
   const { routes, isToggledNavBarOpen, handleViewToggledNavBar } = props
 
   return (
-    <ToggledNavBarWrapper sx={{ position: 'static' }} container>
+    <ToggledNavBarWrapper container>
       <ToggledNavBar isToggledNavBarOpen={isToggledNavBarOpen} handleViewToggledNavBar={handleViewToggledNavBar}>
         <Block>
           {routes.map((page) => (
