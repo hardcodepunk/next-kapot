@@ -9,6 +9,7 @@ import LogoMesmer from './../../../public/images/illustrations/sponsor__mesmer.s
 import LogoKizer from './../../../public/images/illustrations/sponsor__kizer.svg'
 import LogoUndercover from './../../../public/images/illustrations/sponsor__undercover.svg'
 import LogoTrickDeck from './../../../public/images/illustrations/sponsor__trick-deck.svg'
+import LogoSkateVlaanderen from './../../../public/images/illustrations/sponsor__skate-vlaanderen.svg'
 import LogoVlaamsBrabant from './../../../public/images/illustrations/sponsor__vlaams-brabant.svg'
 import LogoMijnleuven from './../../../public/images/illustrations/sponsor__mijnleuven.svg'
 
@@ -23,6 +24,7 @@ export const logosBrands = [
   { src: LogoKizer, height: 28, alt: 'Logo Kizer Frames', link: 'https://powerslide.com/pages/kizer-homepage' },
   { src: LogoUndercover, height: 28, alt: 'Logo Undercover Wheels', link: 'https://powerslide.com/pages/uc-homepage' },
   { src: LogoTrickDeck, height: 60, alt: 'Logo Trick Deck', link: 'https://thetrickdeck.com/' },
+  { src: LogoSkateVlaanderen, height: 30, alt: 'Logo Skate Vlaanderen', link: 'https://www.skate.vlaanderen/' },
   { src: LogoVlaamsBrabant, height: 40, alt: 'Logo Provincie Vlaams-Brabant', link: 'https://www.vlaamsbrabant.be/' },
   { src: LogoMijnleuven, height: 22, alt: 'Logo Mijnleuven', link: 'https://www.mijnleuven.be/' },
 ]
