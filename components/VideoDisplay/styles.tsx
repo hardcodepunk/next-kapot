@@ -48,7 +48,7 @@ export const VideoBody = styled('div')(({ theme }) => ({
 
 export const VideoCaption = styled(Typography)<TypographyProps>(({ theme }) => ({
   color: '#fff',
-  transition: 'opacity 0.4s ease-out',
+  transition: theme.transitions.create('opacity', theme.motion),
   fontSize: '42px',
   lineHeight: '52px',
   [theme.breakpoints.down('sm')]: {
@@ -60,11 +60,33 @@ export const VideoCaption = styled(Typography)<TypographyProps>(({ theme }) => (
 
 export const CallToAction = styled(ButtonCtaScrollTo)({})
 
+export const PartnerBadge = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  left: '7%',
+  bottom: '10%',
+  zIndex: theme.layers.base,
+  '& img': {
+    height: '40px',
+    width: 'auto',
+  },
+  [theme.breakpoints.down('lg')]: {
+    bottom: '7%',
+  },
+  [theme.breakpoints.down('md')]: {
+    '& img': {
+      height: '30px',
+    },
+  },
+}))
+
 export const Emphasis = styled(Typography)<TypographyProps>(({ theme }) => ({
   fontSize: '47px',
   letterSpacing: '2px',
   verticalAlign: 'bottom',
   color: theme.palette.primary.main,
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '47px',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '37px',
   },
