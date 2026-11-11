@@ -36,7 +36,7 @@ const VideoDisplay = (props: IVideoDisplay) => {
       </VideoBody>
       <PartnerBadge>
         <LogoLink href="https://www.skate.vlaanderen/" target="_blank" rel="noopener">
-          <Logo src={LogoSkateVlaanderen} height={40} alt="Logo Skate Vlaanderen (opens in a new tab)" />
+          <Logo src={LogoSkateVlaanderen} height={40} alt="Skate Vlaanderen (opens in a new tab)" />
         </LogoLink>
       </PartnerBadge>
     </ContainerVideo>
