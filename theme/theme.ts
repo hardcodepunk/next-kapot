@@ -15,12 +15,19 @@ interface Layers {
   drawerPanel: number
 }
 
+interface Motion {
+  duration: number
+  easing: string
+}
+
 declare module '@mui/material/styles' {
   interface Theme {
     layers: Layers
+    motion: Motion
   }
   interface ThemeOptions {
     layers?: Layers
+    motion?: Motion
   }
 }
 
@@ -36,6 +43,11 @@ const layers: Layers = {
   navMenu: 9002,
   logo: 9003,
   drawerPanel: 9500,
+}
+
+const motion: Motion = {
+  duration: 400,
+  easing: 'ease-out',
 }
 
 const theme = createTheme({
@@ -95,6 +107,7 @@ const theme = createTheme({
     },
   },
   layers,
+  motion,
 })
 
 export default theme

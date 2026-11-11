@@ -48,7 +48,7 @@ export const VideoBody = styled('div')(({ theme }) => ({
 
 export const VideoCaption = styled(Typography)<TypographyProps>(({ theme }) => ({
   color: '#fff',
-  transition: 'opacity 0.4s ease-out',
+  transition: theme.transitions.create('opacity', theme.motion),
   fontSize: '42px',
   lineHeight: '52px',
   [theme.breakpoints.down('sm')]: {

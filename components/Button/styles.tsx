@@ -8,7 +8,7 @@ export const StyledButton = styled(MuiButton)(({ theme, disabled }) => ({
   fontFamily: theme.typography.h2.fontFamily,
   fontSize: '20px',
   color: theme.palette.common.white,
-  transition: 'all 0.4s ease-out',
+  transition: theme.transitions.create('all', theme.motion),
   borderRadius: 0,
   letterSpacing: theme.typography.h5.letterSpacing,
   marginTop: '34px',

@@ -12,7 +12,7 @@ export const Section = styled(Grid)(({ theme }) => ({
     },
     '& .MuiSvgIcon-root': {
       color: theme.palette.common.white,
-      transition: 'all 0.4s ease-out',
+      transition: theme.transitions.create('all', theme.motion),
     },
     '& .MuiIconButton-root:hover .MuiSvgIcon-root': {
       color: theme.palette.primary.main,
