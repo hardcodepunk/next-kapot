@@ -1,12 +1,5 @@
-// Components
-import Logo from '../Icons/Logo'
-
-// Media
-import LogoSkateVlaanderen from './../../public/images/illustrations/sponsor__skate-vlaanderen.svg'
-
 // Styles
-import { CallToAction, ContainerVideo, Emphasis, Video, Overlay, PartnerBadge, VideoBody, VideoCaption } from './styles'
-import { LogoLink } from '../Icons/Logo/styles'
+import { CallToAction, ContainerVideo, Emphasis, Video, Overlay, VideoBody, VideoCaption } from './styles'
 
 // Types
 import { IVideoDisplay } from './types'
@@ -34,11 +27,6 @@ const VideoDisplay = (props: IVideoDisplay) => {
           return null
         })}
       </VideoBody>
-      <PartnerBadge>
-        <LogoLink href="https://www.skate.vlaanderen/" target="_blank" rel="noopener">
-          <Logo src={LogoSkateVlaanderen} height={40} alt="Skate Vlaanderen (opens in a new tab)" />
-        </LogoLink>
-      </PartnerBadge>
     </ContainerVideo>
   )
 }

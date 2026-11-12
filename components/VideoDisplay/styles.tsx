@@ -60,25 +60,6 @@ export const VideoCaption = styled(Typography)<TypographyProps>(({ theme }) => (
 
 export const CallToAction = styled(ButtonCtaScrollTo)({})
 
-export const PartnerBadge = styled('div')(({ theme }) => ({
-  position: 'absolute',
-  left: '7%',
-  bottom: '10%',
-  zIndex: theme.layers.base,
-  '& img': {
-    height: '40px',
-    width: 'auto',
-  },
-  [theme.breakpoints.down('lg')]: {
-    bottom: '7%',
-  },
-  [theme.breakpoints.down('md')]: {
-    '& img': {
-      height: '30px',
-    },
-  },
-}))
-
 export const Emphasis = styled(Typography)<TypographyProps>(({ theme }) => ({
   fontSize: '47px',
   letterSpacing: '2px',
